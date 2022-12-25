@@ -131,3 +131,10 @@ main {
     color: var(--dark-brown);
     text-align: center;
 }
+
+hr {
+    border-color: var(--pinkish);
+    border-style: solid;
+    width: 90%;
+    margin: 15px auto;
+}
