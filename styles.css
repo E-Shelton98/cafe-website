@@ -288,3 +288,105 @@ hr {
     width: 90%;
   }
 }
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  header {
+    height: 4rem;
+  }
+
+  header #header-nav {
+    height: 100%;
+  }
+
+  #header-nav-ul {
+    align-items: center;
+    height: 100%;
+    justify-content: space-around;
+    list-style: none;
+    width: 100%;
+  }
+
+  .header-nav-li {
+    text-align: center;
+    width: 100%;
+  }
+
+  .header-nav-a {
+    font-size: 1.1em;
+  }
+
+  #header-nav-logo-li {
+    height: 100%;
+    width: 25%;
+  }
+
+  #header-logo {
+    height: 100%;
+    width: auto;
+  }
+
+  main {
+    height: 100%;
+    padding: 1rem;
+    width: auto;
+  }
+
+  #hero {
+    border-radius: .6rem .6rem .6rem .5rem;
+    height: 15rem;
+    margin: .5rem;
+  }
+
+  #hero img {
+    border-radius: .5rem;
+    height: 10rem;
+    width: 12rem;
+  }
+
+  #hero-info {
+    border-radius: .5rem;
+    bottom: 0;
+    height: 100%;
+    right: 0;
+    width: 95%;
+  }
+
+  #hero-intro {
+    height: 20%;
+    margin: .5rem .5rem .5rem 35%;
+    width: 60%;
+  }
+
+  #hero-address {
+    margin: 1.5rem .5rem .5rem 35%;
+    text-align: center;
+  }
+
+  #hero-hr {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    margin-left: 35%;
+    width: 60%;
+  }
+
+  #hero-phone {
+    margin: .5rem .5rem .5rem 35%;
+    text-align: center;
+  }
+
+  #hero-hours {
+    border-radius: .5rem;
+    height: 15%;
+    margin: 2.5rem auto;
+    width: 90%;
+  }
+
+  #hero-hours-p {
+    text-align: center;
+  }
+
+  hr {
+    margin: 1.5rem auto;
+    width: 90%;
+  }
+}
