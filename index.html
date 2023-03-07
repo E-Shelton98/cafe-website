@@ -55,36 +55,57 @@
       </div>
       <hr />
       <div id="drinks">
-        <div class="section" data-section="Seasonal Drinks">
-          <h2>Seasonal Drinks</h2>
-          <ul>
-            <li>Pumpkin Spice Latte</li>
-            <li>Peppermint Mocha</li>
-            <li>Eggnog Latte</li>
-            <li>Hot Apple Cider</li>
-          </ul>
-        </div>
-        <div class="section" data-section="Coffee Drinks">
-          <h2>Coffee Drinks</h2>
-          <ul>
-            <li>Latte</li>
-            <li>Cappuccino</li>
-            <li>Americano</li>
-            <li>Espresso</li>
-          </ul>
-        </div>
-        <div class="section" data-section="Soda Drinks">
-          <h2>Soda Drinks</h2>
-          <ul>
-            <li>Coca-Cola</li>
-            <li>Sprite</li>
-            <li>Fanta</li>
-            <li>Root Beer</li>
-          </ul>
-        </div>
-        <div class="pagination">
-          <button class="drinks-prev">&lt;</button>
-          <button class="drinks-next">&gt;</button>
+        <div class="seasonal-carousel">
+          <div class="seasonal-drink">
+            <img
+              src="https://source.unsplash.com/random/?drink,soda"
+              alt="Seasonal Drink 1 Image"
+              class="seasonal-drink-image"
+            />
+            <div class="seasonal-drink-info">
+              <h2>Seasonal Drink 1</h2>
+              <p class="seasonal-drink-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+                quae?
+              </p>
+              <p class="seasonal-drink-price">price</p>
+            </div>
+          </div>
+          <div class="seasonal-drink">
+            <img
+              src="https://source.unsplash.com/random/?drink,tea"
+              alt="Seasonal Drink 2 Image"
+              class="seasonal-drink-image"
+            />
+            <div class="seasonal-drink-info">
+              <h2>Seasonal Drink 2</h2>
+              <p class="seasonal-drink-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+                quae?
+              </p>
+              <p class="seasonal-drink-price">price</p>
+            </div>
+          </div>
+          <div class="seasonal-drink">
+            <img
+              src="https://source.unsplash.com/random/?drink,coffee"
+              alt="Seasonal Drink 3 Image"
+              class="seasonal-drink-image"
+            />
+            <div class="seasonal-drink-info">
+              <h2>Seasonal Drink 3</h2>
+              <p class="seasonal-drink-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+                quae?
+              </p>
+              <p class="seasonal-drink-price">price</p>
+            </div>
+          </div>
+          <div class="drink-pagination">
+            <button class="drink-prev">Prev</button>
+            <div id="drink-tracker"></div>
+            <button class="drink-next">Next</button>
+          </div>
         </div>
       </div>
     </main>

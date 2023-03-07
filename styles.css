@@ -83,10 +83,40 @@ main {
   color: var(--dark-brown);
 }
 
-hr {
+main hr {
   border-color: var(--pinkish);
   border-radius: .5rem;
   border-style: solid;
+}
+
+.seasonal-carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.seasonal-drink {
+  background-color: var(--pinkish);
+  position: relative;
+  z-index: 0;
+}
+
+.seasonal-drink img {
+  object-fit: fill;
+}
+
+.seasonal-drink-info {
+  background-color: var(--dark-brown);
+  position: absolute;
+  z-index: -1;
+}
+
+.seasonal-drink h2 {
+  color: var(--light-brown);
+}
+
+.seasonal-drink-info p {
+  color: var(--light-brown);
 }
 
 @media only screen and (max-width: 375px) {
@@ -187,6 +217,55 @@ hr {
     margin: 1.5rem auto;
     width: 90%;
   }
+
+  #drinks {
+    height: 20rem;
+    margin: .5rem;
+  }
+
+  .seasonal-drink {
+    align-items: center;
+    border-radius: .6rem .6rem .6rem .5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 10rem;
+    justify-content: space-around;
+  }
+
+  .seasonal-drink img {
+    border-radius: 0.5rem;
+    height: 8rem;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 6rem;
+  }
+
+  .seasonal-drink-info {
+    border-radius: .5rem;
+    bottom: 0;
+    height: 100%;
+    right: 0;
+    width: 90%;
+  }
+
+  .seasonal-drink-info h2 {
+    margin: .5rem .5rem .5rem 30%;
+    text-align: center;
+  }
+
+  .seasonal-drink-description{
+    text-align: center;
+    margin: .5rem .5rem .5rem 30%;
+  }
+
+  .seasonal-drink-price {
+    text-align: center;
+    margin: .75rem .5rem .5rem 30%;
+  }
+
 }
 
 @media screen and (min-width: 376px) and (max-width: 425px) {
@@ -363,9 +442,9 @@ hr {
   }
 
   #hero-hr {
-    margin-top: .5rem;
     margin-bottom: .5rem;
     margin-left: 35%;
+    margin-top: .5rem;
     width: 60%;
   }
 

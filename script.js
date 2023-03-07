@@ -1,51 +1,54 @@
 // Get the sections and pagination controls
-const sections = document.querySelectorAll('.section')
-const drinksPrevBtn = document.querySelector('.drinks-prev')
-const drinksNextBtn = document.querySelector('.drinks-next')
+const drinks = document.querySelectorAll('.seasonal-drink')
+const prevBtn = document.querySelector('.drink-prev')
+const nextBtn = document.querySelector('.drink-next')
+const drinkTracker = document.querySelector('#drink-tracker')
 
 // Set the initial section index
-let sectionIndex = 0
+let drinkIndex = 0
+prevBtn.disabled = true
 
 // Hide all sections except the first one
-sections.forEach((section, index) => {
-  if (index !== sectionIndex) {
-    section.style.display = 'none'
+drinks.forEach((drink, index) => {
+    const div = document.createElement('div')
+    div.classList.add('.drink-tracker-dot')
+  drinkTracker.appendChild(div)
+  if (index !== drinkIndex) {
+    drink.style.display = 'none'
   }
 })
 
 // Add click handlers for the pagination controls
-drinksPrevBtn.addEventListener('click', () => {
-  if (sectionIndex > 0) {
+prevBtn.addEventListener('click', () => {
+  nextBtn.disabled = false
+  if (drinkIndex > 0) {
     // Hide the current section
-    sections[sectionIndex].style.display = 'none'
+    drinks[drinkIndex].style.display = 'none'
 
     // Decrement the section index
-    sectionIndex--
+    drinkIndex--
 
     // Show the new section
-    sections[sectionIndex].style.display = 'block'
+    drinks[drinkIndex].style.display = 'flex'
+  }
+  if (drinkIndex === 0) {
+    prevBtn.disabled = true
   }
 })
 
-drinksNextBtn.addEventListener('click', () => {
-  if (sectionIndex < sections.length - 1) {
+nextBtn.addEventListener('click', () => {
+  prevBtn.disabled = false
+  if (drinkIndex < drinks.length - 1) {
     // Hide the current section
-    sections[sectionIndex].style.display = 'none'
+    drinks[drinkIndex].style.display = 'none'
 
     // Increment the section index
-    sectionIndex++
+    drinkIndex++
 
     // Show the new section
-    sections[sectionIndex].style.display = 'block'
+    drinks[drinkIndex].style.display = 'flex'
   }
-  else if (sectionIndex == sections.length -1) {
-    // Hide the current section
-    sections[sectionIndex].style.display = 'none'
-
-    // Set the section index back to 0
-    sectionIndex = 0
-
-    // Show the new section
-    sections[sectionIndex].style.display = 'block'
+  if (drinkIndex === drinks.length - 1) {
+    nextBtn.disabled = true
   }
 })
